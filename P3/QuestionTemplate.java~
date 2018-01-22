@@ -1,0 +1,28 @@
+
+
+public class QuestionTemplate{
+  private String preTest;
+  private String middleString;
+  private String endText;
+  private int operation;
+  
+  public QuestionTemplate(String preText, String middleText, String endText, int operation){
+    this.preText = preText;
+    this.middleText = middleText;
+    this.endText = endText;
+    this.operation = operation;
+  }
+  
+  public boolean isMatch(String question){
+    return question.startswith(preTest) && question.endswith(endText) && question.contains(middleText);
+  }
+  
+  public Expression parseQuestion(String question){
+    if (isMatch(question) == true){
+      return Expression;
+    }
+  }
+  
+  
+  
+}

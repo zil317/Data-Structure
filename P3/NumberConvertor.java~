@@ -1,0 +1,92 @@
+
+
+
+public class NumberConvertor{
+  
+  private String[] FIRST_NUMBERS;
+  private String[] TENS_NUMBERS;
+  private Arraylist: numbersList;
+  
+  public NumberConvertor(){
+    
+    ArrayList<String> numbersList = new ArrayList<String>(28);
+    Collections.sort(numbersList);
+    
+  }
+  
+  private int lookupValueOfWord(String numberWord){
+    int low = 0;
+    int high = numbersList.size();
+    
+    while(high>=low){
+      int middle = (low +high)/2;
+      if (numberList[middle] == numberWord){
+        return middle;
+      }
+      if(number[middle] < numberWord){
+        low = middle+1;
+      }
+      if(number[middle] > numberWord){
+        high = middle-1;
+      }
+      return -1;
+    }
+  }
+  
+  public int toNumber(String numberWords){
+    Scanner scanner = new Scanner(System.in);
+    String s1 = scanner.next();
+    scanner.next();
+    String s2 = scanner.next();
+      
+    if(lookupValueOfWords(s1)==-1 || lookupValueOfWords(s1)==-1){
+      return -1
+    }
+    else{
+      int Ten_Integer = lookupValueOfWord(s1);
+      int First_Integer = lookupValueOfWord(s2);
+      return Ten_Integer*10+First_Integer;
+    }
+    
+    /*
+    for (int i=0; i<numbersList.size(); i++){
+      if (numbersList[i].inWords == numberWords){
+        return numbersList[i].value;
+      }
+      
+      else{
+        return -1;
+      }
+    }
+    */
+  }
+  
+  public String toWords(int value){
+    
+    if value<99 && value>0{
+      int TENS_NUMBERS = value/10;
+      int FIRST_NUMBERS = value%10;
+      String s1 = new String("
+    }
+    
+    else{
+      String s2 = new String("Not a number that I can put into words");
+      return s2;
+    }
+  }
+    
+    
+        
+    
+    
+    
+    
+    
+ 
+  
+  
+      
+      
+      
+    
+    

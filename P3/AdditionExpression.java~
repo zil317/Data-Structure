@@ -1,0 +1,12 @@
+
+/**This class performs addition operation*/
+public class AdditionExpression extends Expression{
+  
+  public AdditionExpression(String leftOp, String rightOp) throws InvalidQuestionException{
+      super(leftOp, rightOp);
+  }
+  
+  public int evaluate(){
+    return leftOpInt+rightOpInt;
+  }
+}

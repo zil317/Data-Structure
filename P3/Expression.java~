@@ -1,0 +1,10 @@
+
+
+public abstract class Expression{
+  
+  protected int leftOpInt;
+  protected int rightOpInt;
+  public numConvertor numConvertor;
+  
+  public Expression(String leftOp, String rightOp){
+    

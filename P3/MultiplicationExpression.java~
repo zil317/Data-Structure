@@ -1,0 +1,14 @@
+
+
+
+/**This class performs multiplication*/
+public class MultiplicationExpression extends Expression{
+  
+  public MultiplicationExpression(String leftOp, String rightOp) throws InvalidQuestionException{
+    super(leftOp, rightOp);
+  }
+  
+  public int evaluate(){
+    return leftOpInt*rightOpInt;
+  }
+}

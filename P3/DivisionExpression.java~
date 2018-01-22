@@ -1,0 +1,13 @@
+
+
+/**This class performs division operation*/
+public class DivisionExpression extends Expression{
+  
+  public DivisionExpression(String leftOp, String rightOp) throws InvalidQuestionException{
+    super(leftOp,rightOp);
+  }
+  
+  public int evaluate(){
+    return leftOpInt/rightOpInt;
+  }
+}

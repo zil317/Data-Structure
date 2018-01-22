@@ -1,0 +1,8 @@
+
+
+public class InvalidQuestionException extends Exception{
+  
+  public InvalidQuestionException(){
+    super("Question not understood");
+  }
+}

@@ -1,0 +1,27 @@
+
+
+public class NumberWord{
+  
+  private int value;
+  private String inWords;
+  
+  public NumberWord(int value, String inWords){
+    this.value = value;
+    this.inWords = inWords;
+  }
+  
+  public int getValue(){
+    return value;
+  }
+  
+  public String getInWords(){
+    return InWords;
+  }
+  
+  public int CompareTo(Object obj){
+    if (obj instance of NumberWord){
+      NumberWord numberword = (NumberWord) obj;
+      return inWords.compareTo(numberword.inWords);
+    }
+  }
+}
