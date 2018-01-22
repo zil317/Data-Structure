@@ -1,0 +1,11 @@
+
+
+
+public class Jumble{
+  String s;
+  String s1; 
+  String s2;
+  
+  
+  public String[] findPermutation (String s){
+    

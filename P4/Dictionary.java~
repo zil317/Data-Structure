@@ -1,0 +1,22 @@
+
+
+public class Dictionary{
+  
+  private int maxWordLength;
+  
+  public Dictionary(int maxWordLength){
+    this.maxWordLength = 10;
+  }
+  
+  public Dictionary(){
+    
+  }
+  
+  public void addEntry(String word){
+    
+    
+  }
+  
+  public boolean lookup(String s){
+  }
+    
