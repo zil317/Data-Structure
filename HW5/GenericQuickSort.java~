@@ -1,0 +1,183 @@
+/*
+ CSE 17 
+ Zihan Liu 
+ zil317
+ Homework #5  DEADLINE:November 30, 2016 
+ Program: Quick sort comparison 
+ */
+
+import java.util.*;
+
+
+public class GenericQuickSort{
+  
+  /**a generic implementation of quick sort. If smartPivot is false, then the pivot is always the first element in the list. 
+    * otherwise, the algorithm chooses the pivot to be the medium value among the first, middle and last elementss of the list*/
+  public static <E extends Comparable<E>> void quickSort (E[] list, boolean smartPivot){
+
+   quickSort(list,2 , list.length-1, smartPivot);
+    
+  }
+  
+  /**The recursive helper method for quick sort*/
+  private static <E extends Comparable<E>> void quickSort (E[] list, int first, int last, boolean smartPivot){
+    if(last > first){
+      System.out.println("first" +first);
+      System.out.println("last" +last);
+      int pivotIndex = partition(list, first, last, smartPivot);
+
+        quickSort(list, first, pivotIndex - 1, smartPivot);
+        quickSort(list, pivotIndex + 1, last, smartPivot);
+    }
+      
+  }
+  
+  /**Choose a pivot and partition the list into two sets: the elements less than the pivot and the elements greater than the pivot.
+    * place the pivot between these two sets and return its index.
+    if smartPivot is false, then the pivot is always the first element in the list.
+    otherwise, the algorithm chooses */
+  private static <E extends Comparable<E>> int partition (E[] list, int first, int last, boolean smartPivot){
+    E pivot = null;
+    int low = first+1;
+    int high = last;
+    
+    //System.out.println(low);
+    
+    if(smartPivot == false){
+      pivot = list[0];
+     // System.out.println("first "+first);
+     // System.out.println("last" + last);
+      low = first+1;
+      high = last;
+     
+    }
+    if(smartPivot == true){
+      
+      int middle = (list.length-1)/2;
+      
+      if(list[middle].compareTo(list[first]) > 0 && list[middle].compareTo(list[last]) < 0){
+        pivot = list[middle];
+        
+        low = first;
+        high = last;
+        
+      }
+      
+      else if(list[middle].compareTo(list[first]) < 0 && list[middle].compareTo(list[last]) < 0 && list[first].compareTo(list[last]) < 0){
+        pivot = list[first];
+        
+        low = first+1;
+        high = last;
+      }
+      
+      else{
+        pivot = list[last];
+        
+        low = first;
+        high = last-1;
+      }
+       
+    }
+    
+    
+    while (high > low){
+   //   System.out.println("high"+high);
+   //   System.out.println("low"+low);
+   //   System.out.println("pivot"+pivot);
+   //  System.out.println("list low "+list[low]);
+   //  System.out.println("list high "+list[high]);
+      while (low <= high && list[low].compareTo(pivot) <=0 ){
+        low++;
+      }
+      while(low <= high && list[high].compareTo(pivot) >0){
+        high--;
+      }
+      
+      if (high > low){
+        E temp = list[high];
+        list[high] = list[low];
+        list[low] = temp;
+      }
+    }
+    
+    while (high > first && list[high].compareTo(pivot) >=0 ){
+      high--;
+      
+      if(pivot.compareTo(list[high])>0){
+        list[first] = list[high];
+        list[high] = pivot;
+        return high;
+      }
+      else{
+        return first;
+      }
+    }
+    
+   return 0;     
+  }
+  
+  public static Integer[] makeRandomIntList (int size){
+    Integer[] intArray = new Integer[size];
+    
+    Random randomNumber = new Random();
+    
+    for (int i= 0; i<size; i++){
+      intArray[i] = randomNumber.nextInt(999999);
+      System.out.println(intArray[i]);
+    }
+    return intArray;
+  }
+  
+  public static void main(String[] args){
+    
+    Integer[] listcopy1 = null;
+    Integer[] listcopy2 = null;
+    Integer[] listcopy3 = null;
+    Integer[] listcopy4 = null;
+    Integer[] listcopy5 = null;
+    
+    Integer [] list1 = new Integer[]{12, 34, 56, 10, 8};
+    
+    //Integer[] list1 = makeRandomIntList(5);
+    
+/*    
+    Integer[] list1 = makeRandomIntList(100000);
+    System.arraycopy(list1, 0, listcopy1, 0, 100000);
+    Integer[] list2 = makeRandomIntList(250000);
+    System.arraycopy(list2, 0, listcopy2, 0, 250000);
+    Integer[] list3 = makeRandomIntList(500000);
+    System.arraycopy(list3, 0, listcopy3, 0, 500000);
+    Integer[] list4 = makeRandomIntList(750000);
+    System.arraycopy(list4, 0, listcopy4, 0, 750000);
+    Integer[] list5 = makeRandomIntList(1000000);
+    System.arraycopy(list5, 0, listcopy5, 0, 1000000);
+    
+ */
+    System.out.println("Comparing sorts on lists of integers: ");
+    
+    System.out.println("Size      Quick sort(default)           Quick Sort(smart pivot)");
+    System.out.println("100000");
+    
+    long startTime = System.currentTimeMillis();
+    quickSort(list1, false);
+    long endTime = System.currentTimeMillis();
+    long executionTime = endTime - startTime;
+    
+    System.out.println(executionTime);
+                        
+    
+    
+    
+  }
+  
+  
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
