@@ -1,0 +1,1 @@
+S	42001	Gordon Gecko	85234.12	0.001 C	44001	Flower Power	12.83	9.95 C	44002	Joe Schmo	392.52	4.50

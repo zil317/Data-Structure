@@ -1,0 +1,25 @@
+
+
+public class SavingsAccount{
+  
+  private double interestRate;
+  
+  
+  public SavingsAccount(int accountNum, String customerName, double balance, double interestRate){
+  }
+    
+  public SavingsAccount(int accountNum, String customerName, double interestRate){
+    balance = 0;
+  }
+  
+  public double getInterestRate(){
+    return interestRate;
+  }
+  
+  public void accrueInterest(){
+    balance += interestRate*balance;
+  }
+  
+  public void printAccountInfo(){
+  }
+  

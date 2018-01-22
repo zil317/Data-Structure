@@ -1,0 +1,25 @@
+
+public class CheckingAccount extends BankAccount{
+  
+  private double monthlyFee;
+  
+  public checkingAccount(int accountNum, String customerName, double balance, double monthly fee){
+  }
+  
+  public double getMonthlyFee(){
+    return monthlyFee;
+  }
+  
+  public void setMonthlyFee(double monthlyFee){
+  }
+  
+  public void applyFee(){
+    balance = balance - monthlyFee;
+  }
+  
+  public void printAccountInfo(){
+  }
+  
+  
+    
+  

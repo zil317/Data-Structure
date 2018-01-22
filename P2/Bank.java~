@@ -1,0 +1,36 @@
+
+
+public class Bank{
+  private String name;
+  private BankAccount[] accounts;
+  private int totalAccount;
+  public int MAX_ACCOUNTS = 20;
+  
+  public String Bank(){
+    totalAccounts = 0;
+    accounts = MAX_ACCOUNTS;
+  }
+  
+  public String getName(){
+    return name;
+  }
+  
+  public void addAccount(BankAccount newAcct){
+    accounts[totalAccounts] = newAcct;
+    totalAccounts++;
+  }
+    
+  public void printBankSunmmary(){
+  }
+  
+  public void accrueInterestToSavingsAccounts(){
+  }
+  
+  public void applyFeesToCheckingAccounts(){
+  }
+  
+  public void loadAccountsFromFile(File acctFile){
+  }
+  
+  
+  

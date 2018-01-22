@@ -1,0 +1,40 @@
+
+
+public class BankAccount{
+  int accountNum;
+  String customerName;
+  double balance;
+  
+  public BankAccount(int accountNum, String customerName, double balance){
+  }
+  
+  public BankAccount(int accountNum, String customerName){
+    accountNum = 0;
+    
+  }
+  
+  public int getAccountNum(){
+    return accountNum;
+  }
+  
+  public String getCustomerName(){
+    return customerName;
+  }
+  
+  public double getBalance(){
+    return balance;
+  }
+  
+  public void makeDeposit(double depositAmt){
+    balance = balance + depositAmt;
+  }
+  
+  pubic void printAccountInfo(){
+  }
+  
+      
+      
+      
+      
+      
+      
