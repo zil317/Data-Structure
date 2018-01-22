@@ -1,0 +1,7 @@
+
+public class DuplicateEmployeeException extends ArrayStoreException{
+  
+  private String email;
+  
+  public DuplicateEmployeeException(String email){
+    throw new DuplicateEmployeeException("")

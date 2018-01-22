@@ -1,0 +1,17 @@
+
+public class Faculty extends Employee{
+  
+  private String research;
+  
+  public Faculty(String name, String title, String email, String research){
+    super(name,title,email,research);
+  }
+  
+  public String getResearch(){
+    return research;
+  }
+  
+  public String toString(){
+    return this.name+", Staff, "+this title;
+  }
+  

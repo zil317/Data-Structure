@@ -1,0 +1,43 @@
+
+
+public class Employee{
+  
+  protected String name;
+  protected String title;
+  protected String emai;
+  
+  public Employee(String name, String title, String email){
+    this.name = name;
+    this.title = title;
+    this.email = email;
+  }
+  
+  public String getName{
+    return name;
+  }
+  
+  public String getTitle{
+    return title;
+  }
+  
+  public String getEmail{
+    return email;
+  }
+  
+  public String toString(){
+    return this.name+", Staff, "+this title
+  }
+  
+  public boolean equals(o:Object){
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,12 @@
+
+
+public class Department{
+  
+  private java.util.ArrayList people;
+  
+  public Department(){
+    people.length = 0;
+  }
+  
+  public void addPerson(Employee emp){
+    
