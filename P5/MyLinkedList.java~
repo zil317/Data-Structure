@@ -1,0 +1,59 @@
+
+
+public class MyLinkedList<E> {
+  private Node<E> head;
+  private Node<E> tail;
+  
+  
+  public MyLinkedList(){
+  }
+  
+  public MyLinkedList(E[] objects){
+    super(objects);
+  }
+  
+  public boolean contains (E e) {
+    
+  }
+  
+  public int indexOf (E e){
+    System.out.println("implementation left as an exercise");
+    return 0;
+    
+  }
+  
+  public MyLinkedList <E> extraSublist(int start, int end){
+  }
+  
+  public void MyLinked<E> prepend (MyLinked<E> prefix){
+  }
+  
+  public void add(E e, int index){
+    if (index == 0){
+      addFirst(e);
+    }
+    else if (index >= size){
+      addLast(e);
+    }
+    else{
+      Node<E>current = head;
+      for (int i=1; i< index; i++){
+        current = current.next;
+      }
+      Node<E> temp = current.next;
+      current.next = new Node<E>(e);
+      (curren.next).next = temp;
+      size++;
+    }
+    
+    
+    
+  }
+  
+  
+  
+  
+  public E remove(int index){
+  }
+  
+  

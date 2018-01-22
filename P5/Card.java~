@@ -1,0 +1,36 @@
+
+
+public class Card{
+  private char suit;
+  private int rank;
+  
+  public Card (char suit, int rank){
+    super(char, rank);
+  }
+  
+  public char getSuit(){
+    return suit;
+  }
+  
+  public int getRank(){
+    return rank;
+  }
+  
+  public String toString(){
+    System.out.println(this.rank +" of " + this.suit);
+  }
+  
+  public boolean equals(Object o){
+    if(o.suit.equalsTo(this.suit) && o.rank.equalsTo(this.rank)){
+      return true;
+    }
+    return false;
+  }
+}
+  
+  
+  
+  
+    
+    
+  

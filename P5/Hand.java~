@@ -1,0 +1,28 @@
+
+
+public class Hand{
+  
+  private MyLinkedList<Card> cards;
+  
+  
+  public void addCard(Card c){
+    cards.add(c);
+  }
+  
+  public void removeCard(Card c){
+    cards.remove(c);
+  }
+  
+  public Card getCard(int index){
+    return cards.get(index);
+  }
+  
+  public int size(){
+    return cards.size();
+  }
+  
+  public String toString(){
+    
+  
+  
+  
