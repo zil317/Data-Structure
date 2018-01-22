@@ -1,0 +1,14 @@
+
+
+public class Document {
+  private int numTerms;
+  private Term[] terms;
+  
+  
+  public Document {
+    int numTokens=0;
+    terms= new Term[50];
+  }
+  
+  public addToken {
+    

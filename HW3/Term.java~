@@ -1,0 +1,44 @@
+
+public class Term {
+  
+  private String token;
+  private int frequency;
+  
+  public Term(String token, int frequency){
+    this.token = token;
+    this.frequency = frequency;
+  }
+  
+  public Term(String token){
+    frequency=1;
+  }
+  
+  public String getToken() {
+    return token;
+  }
+  
+  public String getFrequency(){
+    return frequency;
+  }
+  
+  public addToFrequency(int integer){
+    frequency = getFrequency()+integer;
+  }
+  
+  public getLetterCount(char parameter){
+    int counter=0;
+    for(int i=0; i<token.length(); i++){
+      if(token.charAt(i) == parameter){
+        counter++;
+      }
+    }
+    
+    
+        
+    
+                          
+                          
+                          
+                          
+                          
+                          
