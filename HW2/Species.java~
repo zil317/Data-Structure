@@ -1,0 +1,51 @@
+
+
+import java.util*
+  
+  /**a Species class with the following data fields and methods. */
+  
+  public class Species{
+  
+  //fields: from the middle of the UML diagram 
+  String commonName;
+  String population;
+  String growthRate;
+  String updateYear;
+  
+  /**construct a new default species*/
+  public Species(){
+    commonName = "n/a";
+    population = 0;
+    growthRate = 0;
+    updateYear = 2016;
+  }
+  
+  /**Construct a new Species with given name, pupulation, growth rate and updated year. */
+  public Species(String commonName, int population, double growthRate, int updatedYear){
+    commonName = acommonName;
+    population = apopulation;
+    growthRate = agrowthRate;
+    updatedYear = aupdatedYear;
+  }
+  /**create an instance method if the population is less than or equal to 5000 returns true.Otherwise return false*/
+  public boolean isEndangered(){
+    if(population<=5000){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  
+  /**create an instance method called predictPopulation*/
+  public int predictPopulation(){
+   int newPopulation = (int) (population*(1+growthRate));
+    return newPopulation;
+  }
+  
+  /**create an instance method printPopulationTable*/
+  public static void printPopulationTable(Species[] updatedYear){
+    Scanner input = new Scanner(Systen.in);
+    System.out.println("Enter a year parameter");
+    String newYear = input.nextline();
+    System.out.print 
